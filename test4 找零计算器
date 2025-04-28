@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+int price = 0;
+int bill = 0;
+printf("请问该物品多少钱？");
+scanf_s("%d", &price);
+printf("您将给出票面为：");
+scanf_s("%d", &bill);
+int t = bill - price;
+if (t >= 0)
+{
+printf("找零%d元", t);
+}
+else
+{
+printf("你的钱不够");
+}
+return 0;
+}
