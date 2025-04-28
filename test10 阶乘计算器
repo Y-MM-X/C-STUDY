@@ -1,0 +1,34 @@
+//方案1：用while循环
+#include <stdio.h>
+int main()
+{
+int n;
+int sum = 1;
+printf("请输入n的值：\n");
+scanf_s("%d", &n);
+int t = n;
+while (n > 0)
+{
+sum = n * sum;
+n--;
+}
+printf("则%d!= %d",t,sum);
+return 0;
+
+}
+//方案2：用for循环
+#include <stdio.h>
+int main()
+{
+int n;
+int sum = 1;
+printf("请输入n的值：\n");
+scanf_s("%d", &n);
+int t = n;
+for (n = n;n > 0;n --)          //for循环有点奇怪
+{
+sum = n * sum;
+}
+printf("则%d!= %d",t,sum);
+return 0;
+}
