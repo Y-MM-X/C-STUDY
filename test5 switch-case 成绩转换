@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+int x;
+printf("请输入你的成绩\n");
+scanf_s("%d", &x);
+int y = x / 10;
+switch (y)               //这里的y是控制表达式，只能说整数型
+{
+case 9:                  //这里的常量可以是常数，也可以是常数计算表达式
+printf("你是A等");
+break;
+case 8:
+printf("你是B等");
+break;
+case 7:
+printf("你是C等");
+break;
+default:
+printf("你是垃圾");
+break;
