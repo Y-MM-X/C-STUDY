@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()   //    目前未解决当第一个数是 -1 时的情况
+{
+int x,n;
+printf("请输入x的值\n");
+double sum = 0;
+n = 0;
+do
+{
+scanf_s("%d", &x);
+if (x != -1)
+{
+sum += x;
+n++;
+}
+else
+{
+sum += 0;
+n += 0;
+}
+} while (x != -1);
+double m = sum / n;
+printf("算数平均数为%lf", m);
+return 0;
+}
