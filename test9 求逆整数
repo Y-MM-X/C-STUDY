@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+int x,m,n;
+n = 0;
+printf("请输入该整数的值:\n");
+scanf_s("%d", &x);
+while (x > 0)
+{
+m = x % 10;
+x /= 10;
+n = n * 10 + m;
+printf("得到各位数分别为%d\n", m);
+}
+printf("得到逆整数为%d", n);
+return 0;
+}
