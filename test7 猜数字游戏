@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+srand(time(0));
+int x = rand() % 100 + 1; //生成1-100的整数
+int y = 0;
+int n = 0;
+printf("我们生成了一个数，你猜是多少呢\n请输入：");
+do
+{
+scanf_s("%d", &y);
+if (y > x)
+{
+printf("你猜大了\n");
+n++;
+}
+else if (y < x)
+{
+printf("你猜小了\n");
+n++;
+}
+else
+{
+printf("你猜对了\n");
+}
+} while (x != y);     //注意while后有分号
+printf("你一共猜了%d次", n);
+return 0;
+}
