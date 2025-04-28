@@ -1,0 +1,48 @@
+//方案1：while
+#include <stdio.h>
+int main() {
+int x, y;
+printf("请输入X的值\n");
+scanf_s("%d", &x);
+y = 0;
+while (x > 0)
+{
+x /= 10;
+y++;
+}
+printf("x是%d位数", y);
+return 0;
+}
+//方案2：do while
+#include <stdio.h>
+int main() {
+int x, y;
+y = 0;
+printf("请输入X的值\n");
+scanf_s("%d", &x);
+do
+{
+x /= 10;
+y++;
+} while (x > 0);     //注意while后有分号
+printf("x是%d位数", y);
+return 0;
+}
+方案3：结合随机数，分析随机数位数
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+int y = 0;
+srand(time(0));
+int x = rand();
+printf("%d", x);
+do
+{
+x /= 10;
+y++;
+} while (x > 0);     //注意while后有分号
+printf("是%d位数", y);
+return 0;
+}
